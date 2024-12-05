@@ -56,6 +56,7 @@ variable "karpenops_enabled" {
 variable "karpenops_image_tag" {
   type        = string
   description = "Image tag to use for the karpenops service."
+  default     = "1.23.6"
 }
 
 variable "karpenops_cluster_id" {

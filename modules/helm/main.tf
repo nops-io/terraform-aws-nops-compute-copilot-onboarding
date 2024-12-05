@@ -1,6 +1,6 @@
 resource "helm_release" "compute_copilot" {
-  name             = "nops-kubernetes-agent"
-  repository       = "oci://public.ecr.aws/nops/kubernetes-agent"
+  name             = local.helm_release_name
+  repository       = local.helm_repo
   chart            = "."
   version          = var.chart_version
   namespace        = "nops"
