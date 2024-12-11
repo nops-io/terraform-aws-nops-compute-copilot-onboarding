@@ -68,3 +68,9 @@ variable "cluster_name" {
   type        = string
   description = "Cluster name where the agent will be deployed."
 }
+
+variable "s3_bucket_name" {
+  type        = string
+  description = "S3 bucket for Container Cost exports, useful if bucket is in another region."
+  default     = ""
+}

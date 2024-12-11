@@ -30,7 +30,7 @@ resource "helm_release" "compute_copilot" {
 
   set {
     name  = "containerInsights.env_variables.APP_AWS_S3_BUCKET"
-    value = data.aws_s3_bucket.bucket.id
+    value = var.s3_bucket_name == "" ? data.aws_s3_bucket.bucket[0].id : var.s3_bucket_name
   }
 
   set {
