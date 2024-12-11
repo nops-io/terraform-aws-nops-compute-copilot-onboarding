@@ -51,8 +51,8 @@ No modules.
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Cluster name where the agent will be deployed. | `string` | n/a | yes |
 | <a name="input_container_insights_enabled"></a> [container\_insights\_enabled](#input\_container\_insights\_enabled) | Whether to enable container insights on installation. | `bool` | `true` | no |
 | <a name="input_datadog_api_key"></a> [datadog\_api\_key](#input\_datadog\_api\_key) | Datadog API key to be used to monitor the agent. | `string` | n/a | yes |
-| <a name="input_extra_set"></a> [extra\_set](#input\_extra\_set) | Map with extra values to add to chart installation. | <pre>map(object({<br>    name  = string,<br>    value = string,<br>    type  = optional(string, "auto")<br>  }))</pre> | `{}` | no |
-| <a name="input_extra_set_sensitive"></a> [extra\_set\_sensitive](#input\_extra\_set\_sensitive) | Map with extra sensitive values to add to chart installation. | <pre>map(object({<br>    name  = string,<br>    value = string,<br>    type  = optional(string, "auto")<br>  }))</pre> | `{}` | no |
+| <a name="input_extra_set"></a> [extra\_set](#input\_extra\_set) | Map with extra values to add to chart installation. | <pre>map(object({<br/>    name  = string,<br/>    value = string,<br/>    type  = optional(string, "auto")<br/>  }))</pre> | `{}` | no |
+| <a name="input_extra_set_sensitive"></a> [extra\_set\_sensitive](#input\_extra\_set\_sensitive) | Map with extra sensitive values to add to chart installation. | <pre>map(object({<br/>    name  = string,<br/>    value = string,<br/>    type  = optional(string, "auto")<br/>  }))</pre> | `{}` | no |
 | <a name="input_karpenops_cluster_id"></a> [karpenops\_cluster\_id](#input\_karpenops\_cluster\_id) | nOps value to be used by the karpenops service. | `string` | n/a | yes |
 | <a name="input_karpenops_enabled"></a> [karpenops\_enabled](#input\_karpenops\_enabled) | Whether to enable karpenops on installation. | `bool` | `true` | no |
 | <a name="input_karpenops_image_tag"></a> [karpenops\_image\_tag](#input\_karpenops\_image\_tag) | Image tag to use for the karpenops service. | `string` | `"1.23.6"` | no |
