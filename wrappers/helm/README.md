@@ -14,7 +14,7 @@ This wrapper does not implement any extra functionality.
 terraform {
   source = "tfr:///terraform-aws-modules/nops-compute-copilot-onboarding/aws//wrappers/helm"
   # Alternative source:
-  # source = "git::git@github.com:terraform-aws-modules/terraform-aws-nops-compute-copilot.git//wrappers/helm?ref=master"
+  # source = "git::git@github.com:terraform-aws-modules/terraform-aws-nops-compute-copilot-onboarding.git//wrappers/helm?ref=master"
 }
 
 inputs = {
