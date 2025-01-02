@@ -3,6 +3,10 @@ locals {
   target_clusters_arns = [for cluster in data.aws_eks_cluster.cluster : cluster.arn]
   s3_bucket_name       = "arn:aws:s3:::nops-container-cost-${data.aws_caller_identity.current.account_id}"
   nops_account         = var.environment == "PROD" ? "202279780353" : "844856862745"
+  current_nops_project = [
+    for project in data.nops_projects.current.projects : project
+    if project.account_number == data.aws_caller_identity.current.account_id
+  ]
   # tflint-ignore: terraform_unused_declarations
   module_version = "1.0.0"
 }

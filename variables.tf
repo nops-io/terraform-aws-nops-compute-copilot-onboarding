@@ -1,6 +1,7 @@
 variable "role_name" {
   type        = string
-  description = "The name of the IAM role to attach the read policy, it should be the same as the integration role created when onboarding into nOps."
+  default     = ""
+  description = "The name of the IAM role to attach the read policy, it should be the same as the integration role created when onboarding into nOps. If left empty it will be fetched automatically."
 }
 
 variable "create_iam_user" {
