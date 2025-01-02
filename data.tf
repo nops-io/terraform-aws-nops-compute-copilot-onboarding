@@ -3,7 +3,7 @@ data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 
 data "aws_iam_role" "nops_integration_role" {
-  name = var.role_name
+  name = var.role_name == "" ? split("/", local.current_nops_project[0].arn)[1] : var.role_name
 }
 
 data "aws_eks_clusters" "clusters" {}
@@ -17,3 +17,5 @@ data "aws_iam_openid_connect_provider" "provider" {
   for_each = var.create_iam_user == false ? local.target_clusters : toset([])
   url      = data.aws_eks_cluster.cluster[each.value].identity[0].oidc[0].issuer
 }
+
+data "nops_projects" "current" {}
