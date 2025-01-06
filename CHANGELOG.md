@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/compare/v1.1.0...v1.2.0) (2025-01-06)
+
+
+### Features
+
+* Adding container cost bucket integration ([#3](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/issues/3)) ([68c5779](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/commit/68c5779bd1e8f58253cc36f88bf14c3c20ca0bb8))
+
 ## [1.1.0](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/compare/v1.0.0...v1.1.0) (2025-01-02)
 
 
