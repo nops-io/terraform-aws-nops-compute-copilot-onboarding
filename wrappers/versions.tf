@@ -7,7 +7,7 @@ terraform {
     }
     nops = {
       source  = "nops-io/nops"
-      version = "~> 0.0.8"
+      version = "~> 0.1.0"
     }
   }
 }
