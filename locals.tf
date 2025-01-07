@@ -7,6 +7,6 @@ locals {
     for project in data.nops_projects.current.projects : project
     if project.account_number == data.aws_caller_identity.current.account_id
   ]
-  # tflint-ignore: terraform_unused_declarations
-  module_version = "1.2.0"
+
+  module_version = "1.2.1"
 }
