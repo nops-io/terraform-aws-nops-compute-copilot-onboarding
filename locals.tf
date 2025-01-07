@@ -8,5 +8,5 @@ locals {
     if project.account_number == data.aws_caller_identity.current.account_id
   ]
 
-  module_version = "1.2.1"
+  module_version = "1.3.0"
 }
