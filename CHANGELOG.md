@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/compare/v1.2.0...v1.3.0) (2025-01-07)
+
+
+### Features
+
+* Release ([#5](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/issues/5)) ([9ced740](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/commit/9ced74094981d31041fe925d4d1c4e3ec1b5d6ca))
+
+
+### Bug Fixes
+
+* Fixing cluster onboarding filtering by account id and region ([#4](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/issues/4)) ([b3f1a82](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/commit/b3f1a8233645a5eb9420ae40913bf2f843a12fdf))
+
 ## [1.2.0](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/compare/v1.1.0...v1.2.0) (2025-01-06)
 
 
