@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.1](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/compare/v1.3.0...v1.3.1) (2025-01-10)
+
+
+### Bug Fixes
+
+* license ([#6](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/issues/6)) ([a84b0d2](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/commit/a84b0d2fd5ed139f121fd069841860acaeabf815))
+
 ## [1.3.0](https://github.com/nops-io/terraform-aws-nops-compute-copilot-onboarding/compare/v1.2.0...v1.3.0) (2025-01-07)
 
 
