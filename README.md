@@ -1,7 +1,7 @@
 # nOps AWS Compute Copilot Onboarding Terraform Module
 
 ## Description
-
+This module creates all required AWS and nOps resources to integrate EKS clusters into the platform to onboard the Compute Copilot product successfully.
 
 ## Features
 - Creation of an IAM role per cluster in a region or targeted clusters
