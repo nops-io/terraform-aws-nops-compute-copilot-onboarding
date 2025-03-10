@@ -74,12 +74,6 @@ variable "karpenops_image_tag" {
   default     = "1.23.7"
 }
 
-variable "karpenops_cluster_id" {
-  type        = string
-  description = "The cluster ID for Karpenops."
-}
-
-
 variable "s3_bucket_name" {
   type        = string
   description = "S3 bucket for Container Cost exports, useful if bucket is in another region."

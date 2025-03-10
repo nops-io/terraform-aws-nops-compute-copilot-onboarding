@@ -2,13 +2,18 @@ data "aws_eks_cluster" "cluster" {
   name = var.cluster_name
 }
 
-# HTTP Data Source to fetch the clusters
-data "http" "clusters" {
-  url = "https://app.nops.io/svc/karpenter_manager/clusters"
-
+data "http" "nops_clusters" {
+  url = "https://app.nops.io/svc/karpenter_manager/clusters/?days=10"
   request_headers = {
-    Authorization = "Bearer ${var.nops_api_token}"
+    Accept        = "application/json"
+    X-Nops-Api-Key = var.nops_api_token
   }
+}
+
+# Parse the API response
+locals {
+  clusters = jsondecode(data.http.nops_clusters.response_body)
+  cluster  = [for c in local.clusters : c if c.name == var.cluster_name][0]
 }
 
 # Install Helm chart
@@ -21,6 +26,7 @@ resource "null_resource" "helm_upgrade_install" {
     helm_release_name = var.helm_release_name
     helm_namespace    = var.helm_namespace
     cluster_arn       = data.aws_eks_cluster.cluster.arn
+    cluster_id        = local.cluster.external_id
   }
 
   provisioner "local-exec" {
@@ -44,7 +50,7 @@ resource "null_resource" "helm_upgrade_install" {
         --set containerInsights.env_variables.APP_AWS_S3_BUCKET=${var.s3_bucket_name} \
         --set karpenops.enabled=${var.karpenops_enabled} \
         --set karpenops.image.tag=${var.karpenops_image_tag} \
-        --set karpenops.clusterId=${var.karpenops_cluster_id} \
+        --set karpenops.clusterId=${self.triggers.cluster_id} \
         --set nops.apiKey=${var.nops_api_token}
     EOT
   }
