@@ -62,6 +62,5 @@ module "helm_upgrade_install" {
   container_insights_enabled = true
   karpenops_enabled          = false
   karpenops_image_tag        = "1.23.6"
-  karpenops_cluster_id       = ""
 }
 ```
