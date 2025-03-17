@@ -5,7 +5,7 @@ data "aws_eks_cluster" "cluster" {
 data "http" "nops_clusters" {
   url = "https://app.nops.io/svc/karpenter_manager/clusters/?days=10"
   request_headers = {
-    Accept        = "application/json"
+    Accept         = "application/json"
     X-Nops-Api-Key = var.nops_api_token
   }
 }
