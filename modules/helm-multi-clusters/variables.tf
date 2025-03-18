@@ -1,19 +1,6 @@
-
 variable "nops_api_token" {
   type        = string
   description = "API token to authenticate with the nOps platform."
-}
-
-variable "chart_version" {
-  type        = string
-  description = "Compute Copilot chart version to install."
-  default     = ""
-}
-
-variable "timeout" {
-  type        = number
-  description = "Timeout to be set for chart installation."
-  default     = 300
 }
 
 variable "cluster_name" {
