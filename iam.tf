@@ -21,6 +21,8 @@ resource "aws_iam_role_policy" "nops_read_policy" {
 }
 
 resource "aws_iam_role" "nops_cross_account_role" {
+  count = var.create_cross_account_role ? 1 : 0
+  
   name = "nops-cross-account-role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"

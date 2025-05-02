@@ -35,3 +35,9 @@ variable "create_bucket" {
   description = "Whether to create the S3 bucket or not, this variable can be used for cases where the bucket is already present or in another region."
   default     = true
 }
+
+variable "create_cross_account_role" {
+  type    = bool
+  description = "Whether to create the IAM cross account role or not, this variable can be used for cases where the role is already present or in another region."
+  default = true
+}
